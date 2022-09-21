@@ -1,0 +1,34 @@
+@import url('https://rsms.me/inter/inter.css');
+
+:root {
+  --ifm-color-primary: #91c083;
+  --ifm-color-primary-dark: #7eb56e;
+  --ifm-color-primary-darker: #74b063;
+  --ifm-color-primary-darkest: #5d964c;
+  --ifm-color-primary-light: #a4cb98;
+  --ifm-color-primary-lighter: #add0a3;
+  --ifm-color-primary-lightest: #cae1c3;
+  
+  --ifm-font-family-base: 'Inter';
+  --ifm-font-weight-bold: 400;
+  --ifm-global-radius: 4px;
+  
+  --ifm-navbar-background-color: #2d3341;
+  --ifm-card-background-color: #2d3341;
+}
+
+html {
+  background-color:#222837;
+}
+
+.theme-doc-sidebar-container {
+  border-right: 0px !important;
+}
+
+h1 {
+  font-size: 32px !important;
+}
+
+.pagination-nav {
+  display: none;
+}
