@@ -1,0 +1,5 @@
+.vscode
+.github
+.docusaurus
+build
+node_modules

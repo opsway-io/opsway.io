@@ -10,7 +10,7 @@ const config = {
     tagline: "Real-time monitoring and alerting for your infrastructure",
     url: "https://opsway.io",
     baseUrl: "/",
-    onBrokenLinks: "throw",
+    onBrokenLinks: "warn",
     onBrokenMarkdownLinks: "warn",
     favicon: "img/favicon.ico",
 
