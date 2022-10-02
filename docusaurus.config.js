@@ -48,17 +48,16 @@ const config = {
         ({
             navbar: {
                 title: "opsway",
-                logo: {
-                    alt: "My Site Logo",
-                    src: "https://avatars.githubusercontent.com/u/104105414",
-                    href: "/",
-                },
+                // logo: {
+                //     alt: "My Site Logo",
+                //     src: "https://avatars.githubusercontent.com/u/104105414",
+                //     href: "/",
+                // },
                 items: [
                     {
-                        type: "doc",
-                        docId: "overview",
-                        position: "left",
+                        to: "/docs",
                         label: "Docs",
+                        position: "left",
                     },
                     { to: "/docs/api", label: "API", position: "left" },
 

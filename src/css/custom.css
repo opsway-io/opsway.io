@@ -10,7 +10,8 @@
   --ifm-color-primary-lightest: #cae1c3;
   
   --ifm-font-family-base: 'Inter';
-  --ifm-font-weight-bold: 400;
+  --ifm-font-weight-bold: 300;
+  --ifm-font-size-base: 1rem;
   --ifm-global-radius: 4px;
   
   --ifm-navbar-background-color: #2d3341;
