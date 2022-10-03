@@ -47,12 +47,12 @@ const config = {
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
             navbar: {
-                title: "opsway",
-                // logo: {
-                //     alt: "My Site Logo",
-                //     src: "https://avatars.githubusercontent.com/u/104105414",
-                //     href: "/",
-                // },
+                logo: {
+                    alt: "My Site Logo",
+                    src: "img/logo.svg",
+                    width: "100px",
+                    href: "/",
+                },
                 items: [
                     {
                         to: "/docs",
