@@ -13,7 +13,7 @@ const config = {
     onBrokenLinks: "warn",
     onBrokenMarkdownLinks: "warn",
     favicon: "img/favicon.ico",
-
+    trailingSlash: false,
     organizationName: "opsway", // Usually your GitHub org/user name.
     projectName: "docs", // Usually your repo name.
 
@@ -59,8 +59,6 @@ const config = {
                         label: "Docs",
                         position: "left",
                     },
-                    { to: "/docs/api", label: "API", position: "left" },
-
                     { to: "/blog", label: "Blog", position: "left" },
                     {
                         href: "https://github.com/opsway-io/docs",
