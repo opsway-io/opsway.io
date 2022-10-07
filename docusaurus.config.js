@@ -13,7 +13,6 @@ const config = {
     onBrokenLinks: "warn",
     onBrokenMarkdownLinks: "warn",
     favicon: "img/favicon.ico",
-    trailingSlash: false,
     organizationName: "opsway", // Usually your GitHub org/user name.
     projectName: "docs", // Usually your repo name.
 
