@@ -61,7 +61,7 @@ const config = {
                     },
                     { to: "/blog", label: "Blog", position: "left" },
                     {
-                        href: "https://github.com/opsway-io/docs",
+                        href: "https://github.com/opsway-io/opsway-io",
                         label: "GitHub",
                         position: "right",
                     },
