@@ -15,6 +15,7 @@ const config = {
     favicon: "img/favicon.ico",
     organizationName: "opsway", // Usually your GitHub org/user name.
     projectName: "docs", // Usually your repo name.
+    trailingSlash: false,
 
     // Even if you don't use internalization, you can use this field to set useful
     // metadata like html lang. For example, if your site is Chinese, you may want
