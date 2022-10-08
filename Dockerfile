@@ -9,4 +9,5 @@ COPY . /app
 RUN yarn build
 
 FROM nginx:stable-alpine
+COPY ./nginx.conf /etc/nginx/
 COPY --from=build /app/build /usr/share/nginx/html
