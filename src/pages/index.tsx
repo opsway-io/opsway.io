@@ -1,7 +1,7 @@
 import React from "react";
 import Page from "@site/src/components/Page";
-import { Avatar, Box, Button,  Fade, Grid, Stack, Typography } from "@mui/material";
-import {  IoMdAlert, IoMdPulse } from "react-icons/io";
+import { Avatar, Box, Button, Card, CardContent, Fade, Grid, Stack, Typography } from "@mui/material";
+import { IoMdAlert, IoMdPulse } from "react-icons/io";
 import { ImPhone } from "react-icons/im";
 import { CgWebsite } from "react-icons/cg";
 import Spacer from "../components/Spacer";
@@ -54,15 +54,20 @@ export default function Home() {
                             </Stack>
                         </Grid>
 
-                        <Grid item xs={12} md={5} sx={{
-                            display: {
-                                xs: "none",
-                                md: "flex",
-                            },
-                            justifyContent: "center",
-                            alignItems: "center",
-                        }}>
-                            <img src="/img/rocket.svg" height={250}/>
+                        <Grid
+                            item
+                            xs={12}
+                            md={5}
+                            sx={{
+                                display: {
+                                    xs: "none",
+                                    md: "flex",
+                                },
+                                justifyContent: "center",
+                                alignItems: "center",
+                            }}
+                        >
+                            <img src="/img/rocket.svg" height={250} />
                         </Grid>
                     </Grid>
                 </Fade>
@@ -90,67 +95,82 @@ export default function Home() {
                         }}
                     >
                         <Grid item xs={12} md={3} textAlign="left">
-                            <Stack spacing={2}>
-                                <Stack direction="row" spacing={2} alignItems="center">
-                                    <Avatar sx={{ backgroundColor: (t) => t.palette.success.main }}>
-                                        <IoMdPulse />
-                                    </Avatar>
-                                    <Typography variant="h6">Real-time monitoring</Typography>
-                                </Stack>
+                            <Card>
+                                <CardContent>
+                                    <Stack spacing={2}>
+                                        <Stack direction="row" spacing={2} alignItems="center">
+                                            <Avatar sx={{ backgroundColor: (t) => t.palette.success.main }}>
+                                                <IoMdPulse />
+                                            </Avatar>
+                                            <Typography variant="h6">Real-time monitoring</Typography>
+                                        </Stack>
 
-                                <Typography>
-                                    We monitor your websites and services in real-time and alert you when something goes
-                                    wrong.
-                                </Typography>
-                            </Stack>
+                                        <Typography>
+                                            We monitor your websites and services in real-time and alert you when
+                                            something goes wrong.
+                                        </Typography>
+                                    </Stack>
+                                </CardContent>
+                            </Card>
                         </Grid>
 
                         <Grid item xs={12} md={3} textAlign="left">
-                            <Stack spacing={2}>
-                                <Stack direction="row" spacing={2} alignItems="center">
-                                    <Avatar sx={{ backgroundColor: (t) => t.palette.warning.main }}>
-                                        <IoMdAlert />
-                                    </Avatar>
-                                    <Typography variant="h6">Incident management</Typography>
-                                </Stack>
+                            <Card>
+                                <CardContent>
+                                    <Stack spacing={2}>
+                                        <Stack direction="row" spacing={2} alignItems="center">
+                                            <Avatar sx={{ backgroundColor: (t) => t.palette.warning.main }}>
+                                                <IoMdAlert />
+                                            </Avatar>
+                                            <Typography variant="h6">Incident management</Typography>
+                                        </Stack>
 
-                                <Typography>
-                                    We help you to manage incidents and keep your team up-to-date with the latest
-                                    status.
-                                </Typography>
-                            </Stack>
+                                        <Typography>
+                                            We help you to manage incidents and keep your team up-to-date with the
+                                            latest status.
+                                        </Typography>
+                                    </Stack>{" "}
+                                </CardContent>
+                            </Card>
                         </Grid>
 
                         <Grid item xs={12} md={3} textAlign="left">
-                            <Stack spacing={2}>
-                                <Stack direction="row" spacing={2} alignItems="center">
-                                    <Avatar sx={{ backgroundColor: (t) => t.palette.info.main }}>
-                                        <ImPhone />
-                                    </Avatar>
-                                    <Typography variant="h6">On-call</Typography>
-                                </Stack>
+                            <Card>
+                                <CardContent>
+                                    <Stack spacing={2}>
+                                        <Stack direction="row" spacing={2} alignItems="center">
+                                            <Avatar sx={{ backgroundColor: (t) => t.palette.info.main }}>
+                                                <ImPhone />
+                                            </Avatar>
+                                            <Typography variant="h6">On-call</Typography>
+                                        </Stack>
 
-                                <Typography>
-                                    We help you to manage on-call schedules and notify your team when they need to take
-                                    action.
-                                </Typography>
-                            </Stack>
+                                        <Typography>
+                                            We help you to manage on-call schedules and notify your team when they need
+                                            to take action.
+                                        </Typography>
+                                    </Stack>{" "}
+                                </CardContent>
+                            </Card>
                         </Grid>
 
                         <Grid item xs={12} md={3} textAlign="left">
-                            <Stack spacing={2}>
-                                <Stack direction="row" spacing={2} alignItems="center">
-                                    <Avatar sx={{ backgroundColor: (t) => t.palette.text.primary }}>
-                                        <CgWebsite />
-                                    </Avatar>
-                                    <Typography variant="h6">Status page</Typography>
-                                </Stack>
+                            <Card>
+                                <CardContent>
+                                    <Stack spacing={2}>
+                                        <Stack direction="row" spacing={2} alignItems="center">
+                                            <Avatar sx={{ backgroundColor: (t) => t.palette.text.primary }}>
+                                                <CgWebsite />
+                                            </Avatar>
+                                            <Typography variant="h6">Status page</Typography>
+                                        </Stack>
 
-                                <Typography>
-                                    We help you to keep your customers up-to-date with the latest status of your
-                                    services and maintenance windows.
-                                </Typography>
-                            </Stack>
+                                        <Typography>
+                                            We help you to keep your customers up-to-date with the latest status.
+                                        </Typography>
+                                    </Stack>{" "}
+                                </CardContent>
+                            </Card>
                         </Grid>
                     </Grid>
                 </Stack>
@@ -180,81 +200,127 @@ export default function Home() {
                         }}
                     >
                         <Grid item xs={12} md={3} textAlign="left">
-                            <Stack spacing={2}>
-                                <Stack direction="row" spacing={2} alignItems="center">
-                                    <img height={42} src="https://cdn.worldvectorlogo.com/logos/github-icon-1.svg" />
-                                </Stack>
+                            <Card>
+                                <CardContent>
+                                    <Stack spacing={2}>
+                                        <Stack direction="row" spacing={2} alignItems="center">
+                                            <img
+                                                height={42}
+                                                src="https://cdn.worldvectorlogo.com/logos/github-icon-1.svg"
+                                            />
+                                            <Typography variant="h6">GitHub</Typography>
+                                        </Stack>
 
-                                <Typography>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, qui! Sunt, suscipit tempore.
-                                </Typography>
-                            </Stack>
+                                        <Typography>
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, qui!
+                                            Sunt, suscipit tempore.
+                                        </Typography>
+                                    </Stack>
+                                </CardContent>
+                            </Card>
                         </Grid>
 
                         <Grid item xs={12} md={3} textAlign="left">
-                            <Stack spacing={2}>
-                                <Stack direction="row" spacing={2} alignItems="center">
-                                    <img height={42} src="https://cdn.worldvectorlogo.com/logos/prometheus.svg" />
-                                </Stack>
+                            <Card>
+                                <CardContent>
+                                    <Stack spacing={2}>
+                                        <Stack direction="row" spacing={2} alignItems="center">
+                                            <img
+                                                height={42}
+                                                src="https://cdn.worldvectorlogo.com/logos/prometheus.svg"
+                                            />
+                                            <Typography variant="h6">Prometheus</Typography>
 
-                                <Typography>
-                                    We monitor your websites and services in real-time and alert you when something goes
-                                    wrong.
-                                </Typography>
-                            </Stack>
-                        </Grid>
+                                        </Stack>
 
-
-                        <Grid item xs={12} md={3} textAlign="left">
-                            <Stack spacing={2}>
-                                <Stack direction="row" spacing={2} alignItems="center">
-                                    <img height={42} src="https://cdn.worldvectorlogo.com/logos/slack-new-logo.svg" />
-                                </Stack>
-
-                                <Typography>
-                                    We monitor your websites and services in real-time and alert you when something goes
-                                    wrong.
-                                </Typography>
-                            </Stack>
+                                        <Typography>
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, qui!
+                                            Sunt, suscipit tempore.{" "}
+                                        </Typography>
+                                    </Stack>
+                                </CardContent>
+                            </Card>
                         </Grid>
 
                         <Grid item xs={12} md={3} textAlign="left">
-                            <Stack spacing={2}>
-                                <Stack direction="row" spacing={2} alignItems="center">
-                                    <img height={42} src="https://cdn.worldvectorlogo.com/logos/microsoft-teams-1.svg" />
-                                </Stack>
+                            <Card>
+                                <CardContent>
+                                    <Stack spacing={2}>
+                                        <Stack direction="row" spacing={2} alignItems="center">
+                                            <img
+                                                height={42}
+                                                src="https://cdn.worldvectorlogo.com/logos/slack-new-logo.svg"
+                                            />
+                                            <Typography variant="h6">Slack</Typography>
 
-                                <Typography>
-                                    We monitor your websites and services in real-time and alert you when something goes
-                                    wrong.
-                                </Typography>
-                            </Stack>
+                                        </Stack>
+
+                                        <Typography>
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, qui!
+                                            Sunt, suscipit tempore.
+                                        </Typography>
+                                    </Stack>
+                                </CardContent>
+                            </Card>
                         </Grid>
 
                         <Grid item xs={12} md={3} textAlign="left">
-                            <Stack spacing={2}>
-                                <Stack direction="row" spacing={2} alignItems="center">
-                                    <img height={42} src="https://cdn.worldvectorlogo.com/logos/discord.svg" />
-                                </Stack>
+                            <Card>
+                                <CardContent>
+                                    <Stack spacing={2}>
+                                        <Stack direction="row" spacing={2} alignItems="center">
+                                            <img
+                                                height={42}
+                                                src="https://cdn.worldvectorlogo.com/logos/microsoft-teams-1.svg"
+                                            />
+                                            <Typography variant="h6">Microsoft Teams</Typography>
 
-                                <Typography>
-                                    We monitor your websites and services in real-time and alert you when something goes
-                                    wrong.
-                                </Typography>
-                            </Stack>
+                                        </Stack>
+
+                                        <Typography>
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, qui!
+                                            Sunt, suscipit tempore.
+                                        </Typography>
+                                    </Stack>
+                                </CardContent>
+                            </Card>
                         </Grid>
 
                         <Grid item xs={12} md={3} textAlign="left">
-                            <Stack spacing={2}>
-                                <Stack direction="row" spacing={2} alignItems="center">
-                                    <img height={42} src="https://cdn.worldvectorlogo.com/logos/webhooks.svg" />
-                                </Stack>
+                            <Card>
+                                <CardContent>
+                                    <Stack spacing={2}>
+                                        <Stack direction="row" spacing={2} alignItems="center">
+                                            <img height={42} src="https://cdn.worldvectorlogo.com/logos/discord.svg" />
+                                            <Typography variant="h6">Discord</Typography>
 
-                                <Typography>
-                                    We monitor your websites and services in real-time and alert you when something goes
-                                    wrong.
-                                </Typography>
-                            </Stack>
+                                        </Stack>
+
+                                        <Typography>
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, qui!
+                                            Sunt, suscipit tempore.
+                                        </Typography>
+                                    </Stack>
+                                </CardContent>
+                            </Card>
+                        </Grid>
+
+                        <Grid item xs={12} md={3} textAlign="left">
+                            <Card>
+                                <CardContent>
+                                    <Stack spacing={2}>
+                                        <Stack direction="row" spacing={2} alignItems="center">
+                                            <img height={42} src="https://cdn.worldvectorlogo.com/logos/webhooks.svg" />
+                                            <Typography variant="h6">Webhooks</Typography>
+                                        </Stack>
+
+                                        <Typography>
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, qui!
+                                            Sunt, suscipit tempore.
+                                        </Typography>
+                                    </Stack>
+                                </CardContent>
+                            </Card>
                         </Grid>
                     </Grid>
                 </Stack>
