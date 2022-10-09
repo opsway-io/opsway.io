@@ -8,7 +8,10 @@ interface SpacerProps {
 const Spacer: FunctionComponent<SpacerProps> = () => {
     return (
         <Box sx={{
-            marginTop: 8,
+            marginTop: {
+                xs: 8,
+                md: 12
+            },
         }}/>
     );
 }

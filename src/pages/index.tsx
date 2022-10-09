@@ -1,9 +1,11 @@
 import React from "react";
 import Page from "@site/src/components/Page";
-import { Avatar, Box, Divider, Fade, Grid, Stack, Typography } from "@mui/material";
-import { display } from "@mui/system";
-import { IoIosHeart, IoMdAlert, IoMdHeart, IoMdPulse } from "react-icons/io";
+import { Avatar, Box, Button,  Fade, Grid, Stack, Typography } from "@mui/material";
+import {  IoMdAlert, IoMdPulse } from "react-icons/io";
+import { ImPhone } from "react-icons/im";
+import { CgWebsite } from "react-icons/cg";
 import Spacer from "../components/Spacer";
+import { NavLink } from "react-router-dom";
 
 export default function Home() {
     return (
@@ -11,7 +13,7 @@ export default function Home() {
             <Box>
                 <Fade in timeout={250}>
                     <Grid container direction="row" margin="auto">
-                        <Grid item xs={7} textAlign="left">
+                        <Grid item xs={12} md={7} textAlign="left">
                             <Typography
                                 sx={{
                                     fontSize: 64,
@@ -33,19 +35,34 @@ export default function Home() {
                             >
                                 Operations Platform
                             </Typography>
-                            <Typography variant="h4">
-                                Real-time monitoring and incident management platform for you websites and services.
-                            </Typography>
-                        </Grid>
-
-                        <Grid item xs={5} textAlign="center">
                             <Typography
+                                variant="h4"
                                 sx={{
-                                    fontSize: 168,
+                                    marginBottom: 4,
                                 }}
                             >
-                                🚀
+                                Real-time monitoring and incident management platform for you websites and services.
                             </Typography>
+
+                            <Stack direction="row" spacing={2}>
+                                <Button variant="contained" color="success" size="large" component="a" href="/login">
+                                    Get Started for free
+                                </Button>
+                                <Button variant="outlined" color="primary" size="large" component={NavLink} to="/docs">
+                                    Documentation
+                                </Button>
+                            </Stack>
+                        </Grid>
+
+                        <Grid item xs={12} md={5} sx={{
+                            display: {
+                                xs: "none",
+                                md: "flex",
+                            },
+                            justifyContent: "center",
+                            alignItems: "center",
+                        }}>
+                            <img src="/img/rocket.svg" height={250}/>
                         </Grid>
                     </Grid>
                 </Fade>
@@ -54,8 +71,15 @@ export default function Home() {
             <Spacer />
 
             <Fade in timeout={250} style={{ transitionDelay: `100ms` }}>
-                <Stack sx={{ marginTop: 8 }} spacing={2}>
-                    <Typography variant="h5">What can you do with opsway?</Typography>
+                <Stack>
+                    <Typography
+                        variant="h4"
+                        sx={{
+                            marginBottom: 4,
+                        }}
+                    >
+                        What can you do with opsway?
+                    </Typography>
 
                     <Grid
                         container
@@ -101,7 +125,7 @@ export default function Home() {
                             <Stack spacing={2}>
                                 <Stack direction="row" spacing={2} alignItems="center">
                                     <Avatar sx={{ backgroundColor: (t) => t.palette.info.main }}>
-                                        <IoMdPulse />
+                                        <ImPhone />
                                     </Avatar>
                                     <Typography variant="h6">On-call</Typography>
                                 </Stack>
@@ -117,9 +141,9 @@ export default function Home() {
                             <Stack spacing={2}>
                                 <Stack direction="row" spacing={2} alignItems="center">
                                     <Avatar sx={{ backgroundColor: (t) => t.palette.text.primary }}>
-                                        <IoMdPulse />
+                                        <CgWebsite />
                                     </Avatar>
-                                    <Typography variant="h6">Status pages</Typography>
+                                    <Typography variant="h6">Status page</Typography>
                                 </Stack>
 
                                 <Typography>
@@ -132,27 +156,109 @@ export default function Home() {
                 </Stack>
             </Fade>
 
-            {/* <Fade in timeout={250} style={{ transitionDelay: `200ms` }}>
-                <Stack sx={{ marginTop: 8 }} spacing={2}>
-                    <Typography variant="h5" display="flex" alignItems="center">
-                        Integrates with services you already love{" "}
-                        <IoIosHeart
-                            style={{
-                                marginLeft: 8,
-                                color: "#ea7663",
-                            }}
-                        />
+            <Spacer />
+
+            <Fade in timeout={250} style={{ transitionDelay: `200ms` }}>
+                <Stack>
+                    <Typography variant="h4">Integrates with your workflow</Typography>
+
+                    <Typography
+                        variant="subtitle1"
+                        sx={{
+                            marginBottom: 4,
+                        }}
+                    >
+                        We integrate with the open source and developer tools you already use.
                     </Typography>
 
-                    <Grid container gap={4}>
-                        <Avatar src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Slack_icon_2019.svg/2048px-Slack_icon_2019.svg.png" />
-                        <Avatar src="https://sparkcdnwus2.azureedge.net/sparkimageassets/XPDC2RH70K22MN-08afd558-a61c-4a63-9171-d3f199738e9f" />
-                        <Avatar src="https://cdn.worldvectorlogo.com/logos/grafana.svg" />
-                        <Avatar src="https://cdn.worldvectorlogo.com/logos/github-icon-1.svg" />
-                        <Avatar src="https://cdn.worldvectorlogo.com/logos/microsoft-teams.svg" />
+                    <Grid
+                        container
+                        direction="row"
+                        spacing={2}
+                        sx={{
+                            padding: 0,
+                        }}
+                    >
+                        <Grid item xs={12} md={3} textAlign="left">
+                            <Stack spacing={2}>
+                                <Stack direction="row" spacing={2} alignItems="center">
+                                    <img height={42} src="https://cdn.worldvectorlogo.com/logos/github-icon-1.svg" />
+                                </Stack>
+
+                                <Typography>
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, qui! Sunt, suscipit tempore.
+                                </Typography>
+                            </Stack>
+                        </Grid>
+
+                        <Grid item xs={12} md={3} textAlign="left">
+                            <Stack spacing={2}>
+                                <Stack direction="row" spacing={2} alignItems="center">
+                                    <img height={42} src="https://cdn.worldvectorlogo.com/logos/prometheus.svg" />
+                                </Stack>
+
+                                <Typography>
+                                    We monitor your websites and services in real-time and alert you when something goes
+                                    wrong.
+                                </Typography>
+                            </Stack>
+                        </Grid>
+
+
+                        <Grid item xs={12} md={3} textAlign="left">
+                            <Stack spacing={2}>
+                                <Stack direction="row" spacing={2} alignItems="center">
+                                    <img height={42} src="https://cdn.worldvectorlogo.com/logos/slack-new-logo.svg" />
+                                </Stack>
+
+                                <Typography>
+                                    We monitor your websites and services in real-time and alert you when something goes
+                                    wrong.
+                                </Typography>
+                            </Stack>
+                        </Grid>
+
+                        <Grid item xs={12} md={3} textAlign="left">
+                            <Stack spacing={2}>
+                                <Stack direction="row" spacing={2} alignItems="center">
+                                    <img height={42} src="https://cdn.worldvectorlogo.com/logos/microsoft-teams-1.svg" />
+                                </Stack>
+
+                                <Typography>
+                                    We monitor your websites and services in real-time and alert you when something goes
+                                    wrong.
+                                </Typography>
+                            </Stack>
+                        </Grid>
+
+                        <Grid item xs={12} md={3} textAlign="left">
+                            <Stack spacing={2}>
+                                <Stack direction="row" spacing={2} alignItems="center">
+                                    <img height={42} src="https://cdn.worldvectorlogo.com/logos/discord.svg" />
+                                </Stack>
+
+                                <Typography>
+                                    We monitor your websites and services in real-time and alert you when something goes
+                                    wrong.
+                                </Typography>
+                            </Stack>
+                        </Grid>
+
+                        <Grid item xs={12} md={3} textAlign="left">
+                            <Stack spacing={2}>
+                                <Stack direction="row" spacing={2} alignItems="center">
+                                    <img height={42} src="https://cdn.worldvectorlogo.com/logos/webhooks.svg" />
+                                </Stack>
+
+                                <Typography>
+                                    We monitor your websites and services in real-time and alert you when something goes
+                                    wrong.
+                                </Typography>
+                            </Stack>
+                        </Grid>
                     </Grid>
                 </Stack>
-            </Fade> */}
+            </Fade>
         </Page>
     );
 }

@@ -9,8 +9,8 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { NavLink } from "react-router-dom";
-import { Divider } from "@mui/material";
-import { IoIosArrowForward, IoIosMenu } from "react-icons/io";
+import { Divider, Drawer } from "@mui/material";
+import { IoIosArrowForward, IoIosClose, IoIosMenu } from "react-icons/io";
 import { MdDashboard } from "react-icons/md";
 
 const Navbar = () => {
@@ -42,25 +42,25 @@ const Navbar = () => {
                         <IconButton size="large" onClick={handleOpenNavMenu}>
                             <IoIosMenu />
                         </IconButton>
-                        <Menu
-                            anchorEl={anchorElNav}
-                            anchorOrigin={{
-                                vertical: "bottom",
-                                horizontal: "left",
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: "top",
-                                horizontal: "left",
-                            }}
-                            open={Boolean(anchorElNav)}
-                            onClose={handleCloseNavMenu}
-                            sx={{
-                                display: { xs: "block", md: "none" },
-                            }}
-                        >
-                            <MenuItem component={NavLink} to="/product">
-                                <Typography textAlign="center">Product</Typography>
+                        <Menu anchorEl={anchorElNav} open={Boolean(anchorElNav)}>
+                            <MenuItem component={NavLink} to="/" exact>
+                                Overview
+                            </MenuItem>
+
+                            <MenuItem component={NavLink} to="/monitoring">
+                                Monitoring
+                            </MenuItem>
+
+                            <MenuItem component={NavLink} to="/incident-management">
+                                Incident Management
+                            </MenuItem>
+
+                            <MenuItem component={NavLink} to="/pricing">
+                                Pricing
+                            </MenuItem>
+
+                            <MenuItem component={NavLink} to="/docs">
+                                Documentation
                             </MenuItem>
                         </Menu>
                     </Box>
@@ -99,11 +99,9 @@ const Navbar = () => {
                     </Box>
 
                     <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
-                        <Tooltip title="Open settings">
-                            <Button component={"a"} href="/login" variant="outlined" endIcon={<IoIosArrowForward />}>
-                                Dashboard
-                            </Button>
-                        </Tooltip>
+                        <Button component={"a"} href="/login" variant="outlined" endIcon={<IoIosArrowForward />}>
+                            Dashboard
+                        </Button>
                     </Box>
 
                     <Box sx={{ flexGrow: 0, display: { xs: "block", md: "none" } }}>
