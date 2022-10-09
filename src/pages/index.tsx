@@ -6,7 +6,6 @@ import { ImPhone } from "react-icons/im";
 import { CgWebsite } from "react-icons/cg";
 import Spacer from "../components/Spacer";
 import { NavLink } from "react-router-dom";
-
 export default function Home() {
     return (
         <Page>
@@ -65,9 +64,11 @@ export default function Home() {
                                 },
                                 justifyContent: "center",
                                 alignItems: "center",
+                                animation: "shake 0.5s",
+                                animationIterationCount: "infinite",
                             }}
                         >
-                            <img src="/img/rocket.svg" height={250} />
+                                <img src="/img/rocket.svg" height={250} />
                         </Grid>
                     </Grid>
                 </Fade>
@@ -230,7 +231,6 @@ export default function Home() {
                                                 src="https://cdn.worldvectorlogo.com/logos/prometheus.svg"
                                             />
                                             <Typography variant="h6">Prometheus</Typography>
-
                                         </Stack>
 
                                         <Typography>
@@ -252,7 +252,6 @@ export default function Home() {
                                                 src="https://cdn.worldvectorlogo.com/logos/slack-new-logo.svg"
                                             />
                                             <Typography variant="h6">Slack</Typography>
-
                                         </Stack>
 
                                         <Typography>
@@ -274,7 +273,6 @@ export default function Home() {
                                                 src="https://cdn.worldvectorlogo.com/logos/microsoft-teams-1.svg"
                                             />
                                             <Typography variant="h6">Microsoft Teams</Typography>
-
                                         </Stack>
 
                                         <Typography>
@@ -293,7 +291,6 @@ export default function Home() {
                                         <Stack direction="row" spacing={2} alignItems="center">
                                             <img height={42} src="https://cdn.worldvectorlogo.com/logos/discord.svg" />
                                             <Typography variant="h6">Discord</Typography>
-
                                         </Stack>
 
                                         <Typography>
