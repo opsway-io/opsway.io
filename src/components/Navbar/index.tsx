@@ -111,12 +111,6 @@ const Navbar = () => {
                     </Box>
                 </Toolbar>
             </Container>
-
-            <Divider
-                sx={{
-                    opacity: 0.1,
-                }}
-            />
         </Box>
     );
 };
