@@ -2,15 +2,12 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { NavLink } from "react-router-dom";
-import { Divider, Drawer } from "@mui/material";
-import { IoIosArrowForward, IoIosClose, IoIosMenu } from "react-icons/io";
+import { IoIosArrowForward, IoIosMenu } from "react-icons/io";
 import { MdDashboard } from "react-icons/md";
 
 const Navbar = () => {
@@ -62,6 +59,10 @@ const Navbar = () => {
                             <MenuItem component={NavLink} to="/docs">
                                 Documentation
                             </MenuItem>
+
+                            <MenuItem component={"a"} href="https://github.com/opsway-io">
+                                GitHub
+                            </MenuItem>
                         </Menu>
                     </Box>
 
@@ -95,6 +96,9 @@ const Navbar = () => {
                         </Button>
                         <Button component={NavLink} to="/docs" exact>
                             Documentation
+                        </Button>
+                        <Button component={"a"} href="https://github.com/opsway-io">
+                            GitHub
                         </Button>
                     </Box>
 
