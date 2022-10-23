@@ -40,7 +40,7 @@ export default function Home() {
                                     marginBottom: 4,
                                 }}
                             >
-                                Real-time monitoring and incident management platform for you websites and services.
+                                Real-time monitoring and incident management platform for your websites and services.
                             </Typography>
 
                             <Stack direction="row" spacing={2}>
@@ -64,8 +64,6 @@ export default function Home() {
                                 },
                                 justifyContent: "center",
                                 alignItems: "center",
-                                animation: "shake 0.5s",
-                                animationIterationCount: "infinite",
                             }}
                         >
                                 <img src="/img/rocket.svg" height={250} />
