@@ -8,10 +8,31 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { NavLink } from "react-router-dom";
 import { IoIosArrowForward, IoIosMenu } from "react-icons/io";
+import { BiLockAlt } from "react-icons/bi";
 import { MdDashboard } from "react-icons/md";
+import jwt_decode from "jwt-decode";
+
+const IsLoggedIn = () => {
+    const refreshToken = localStorage.getItem('refreshToken');
+
+    try {
+      const { exp } = jwt_decode<{
+        exp: number;
+      }>(refreshToken);
+      if (exp < (new Date().getTime() / 1000)) {
+        return false;
+      }
+    } catch (err) {
+      return false;
+    }
+
+    return true; 
+}
 
 const Navbar = () => {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
+
+    const isLoggedIn = IsLoggedIn();
 
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
@@ -103,8 +124,8 @@ const Navbar = () => {
                     </Box>
 
                     <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
-                        <Button component={"a"} href="/login" variant="outlined" endIcon={<IoIosArrowForward />}>
-                            Dashboard
+                        <Button component={"a"} href="/login" variant="outlined" endIcon={isLoggedIn ? <IoIosArrowForward /> : <BiLockAlt />}>
+                            {isLoggedIn ? "Dashboard" : "Sign in"}
                         </Button>
                     </Box>
 
