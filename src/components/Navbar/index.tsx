@@ -13,11 +13,7 @@ import { MdDashboard } from "react-icons/md";
 import jwt_decode from "jwt-decode";
 
 const IsLoggedIn = () => {
-    if (!window || !window.localStorage) {
-        return false;
-    }
-
-    const refreshToken = window.localStorage.getItem('refreshToken');
+    const refreshToken = localStorage.getItem('refreshToken');
 
     try {
       const { exp } = jwt_decode<{

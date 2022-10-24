@@ -4,6 +4,7 @@ import { theme } from "@site/src/theme/dark";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import Spacer from "../Spacer";
+import BrowserOnly from "@docusaurus/BrowserOnly";
 
 interface PageProps {
     children: React.ReactNode | React.ReactNode[];
@@ -12,7 +13,7 @@ interface PageProps {
 const Page: FunctionComponent<PageProps> = (props) => {
     return (
         <ThemeProvider theme={theme}>
-            <Navbar />
+            <BrowserOnly>{() => <Navbar />}</BrowserOnly>
 
             <Spacer />
 
